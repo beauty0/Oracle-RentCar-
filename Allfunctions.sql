@@ -1,4 +1,4 @@
-------This function is to find out if the CARCUST ID valid,it will zero when and 1 if is invalid 
+------This function is to find out if the CARCUST ID valid,it will zero when valid and 1 if is invalid 
 SET SERVEROUTPUT ON;
 CREATE OR REPLACE FUNCTION CHECK_ID (CARCUST_ID NUMBER)
 RETURN NUMBER 
@@ -28,3 +28,4 @@ SELECT MODEL_TYPE INTO VMODEL_TYPE FROM CARMODEL
 WHERE MODEL_ID = MO;
   RETURN VMODEL_TYPE ;
 END GET_MODEL_NAME;
+/

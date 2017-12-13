@@ -19,11 +19,13 @@ END CHECK_ID;
 /
 ------This function is to get the String Value of a Car Model type with the input of the model id
 create or replace FUNCTION GET_MODEL_NAME 
+----------Declare variable and what to return---------
 (
   MO IN VARCHAR2 
 ) RETURN VARCHAR2 AS 
 VMODEL_TYPE VARCHAR2(25);
 BEGIN
+------Using the select model_type------
 SELECT MODEL_TYPE INTO VMODEL_TYPE FROM CARMODEL
 WHERE MODEL_ID = MO;
   RETURN VMODEL_TYPE ;

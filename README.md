@@ -26,9 +26,11 @@ all the tables are linked together with their unique constraint.
 
 Allsequences.sql
 
-The sequence file has to three auto- crement code for the 3 tables id,
+The sequence file has three auto- crement code for the 3 tables id with the use of the auto-crement code(Nextval) it retrieves the next value in sequence.
 
 Insert_allvalues.sql
+This file has all the values of the table 3 tables
+
 Allfunctions.sql
 Allprocedures.sql
 Allcursors.sql
@@ -37,4 +39,4 @@ Carcust_view.sql
 Packagesspecific.sql
 setup.sql
 
-T
+

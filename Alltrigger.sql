@@ -1,0 +1,36 @@
+------Beauty orjiakor oracle project
+
+------This trigger is for the update of Car MODEL TABLE the triggers shows who the user NAME, OLD AND NEW VALUES.-----
+SET SERVEROUTPUT ON;
+create or replace TRIGGER CARMO 
+AFTER UPDATE OF CAR_COLOR,CAR_TYPE,CAR_YEAR,MODEL_ID,MODEL_TYPE,RENT_ID ON CARMODEL 
+REFERENCING OLD AS old_values NEW AS new_values
+FOR EACH ROW 
+DECLARE  
+V_USER VARCHAR2(20);
+V_DATE VARCHAR2(20);
+BEGIN
+  SELECT USER, TO_CHAR(SYSDATE,'DD/MM/YYYY HH24:MI:SS')INTO V_USER,V_DATE FROM DUAL;
+IF UPDATING THEN
+    DBMS_OUTPUT.PUT_LINE(SQL%ROWCOUNT ||' ROW HAS BEEN UPDATED BY'||V_USER ||' ON '||V_DATE);
+    DBMS_OUTPUT.PUT_LINE('PREVIOUS VALUES :'||' '||:old_values.MODEL_ID||' '||:Old_values.MODEL_TYPE||' '
+    ||:old_values.CAR_COLOR||' '||:old_values.CAR_TYPE||' '||:old_values.CAR_YEAR||' '||:old_values.RENT_ID);
+    DBMS_OUTPUT.PUT_LINE('UPDATED VALUES :'||' '||:new_values.MODEL_ID||' '||:new_values.MODEL_TYPE||' '
+    ||:new_values.CAR_COLOR||' '||:new_values.CAR_TYPE||' '||:new_values.CAR_YEAR||' '||:new_values.RENT_ID);
+END IF;
+EXCEPTION
+WHEN OTHERS THEN
+   RAISE_APPLICATION_ERROR(-20001, 'An error was encountered-'||SQLCODE||'-ERROR-'||SQLERRM);
+END;
+/
+------CREATE TRIGGER TO STOP USER FROM UPDATING CARCUST TABLE DURING WEEKEND
+SET SERVEROUTPUT ON;
+
+create or replace TRIGGER WEEKDAYS_ 
+BEFORE UPDATE OF EMAIL_ADDRESS,FIRST_NAME,LAST_NAME,POSTAL_CODE,ADDRESS,TEL_PHONE ON CARCUST 
+BEGIN
+  if(TO_CHAR (SYSDATE,'DY')IN ('SAT', 'SUN')) THEN
+  RAISE_APPLICATION_ERROR(-20506, 'You may only change date normal business hours.');
+  END IF;
+END;
+/

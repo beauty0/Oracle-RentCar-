@@ -17,6 +17,8 @@ MYRENTCAR has 2 procedures, 2functions, 3cursors, 2triggers a view and lastly a 
                                    
  Setting up MYRENTCAR APP with running the first file Createuser.sql file inside this file is the code to create the tablespace called MYRENTCAR_db and its DATAFILE, next to is run the temporary tablespace 'MYRENTCAR_db_tmp' after that you can now ran the 
  'create user MYRENTCAR IDENTIFIED BY reca'.
+ The next file to use is the 'Grantprivileges.sql' this file is very important because without it the user cannot connect to the schema 
+ inside this file the administrator granted the user'MYRENTCAR ' right to connect to the schema, and right to create a table , procedure, function 
 
 
                                          

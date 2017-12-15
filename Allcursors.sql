@@ -1,3 +1,4 @@
+----Beauty orjiakor oracle project
 ------created a loop to retrieve both the rent_id and return_date from the CARRENT table
 
 set SERVEROUTPUT ON;

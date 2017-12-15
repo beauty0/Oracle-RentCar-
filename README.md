@@ -9,5 +9,19 @@ Inside the Car _customers table (CARCUST) has 7 columns and the names of the col
 Tel_phone, and Email_address.
 The second table Car_model(CARMODEL) has 6 columns, the names of the colums are model_id,model_type,car_color,car_type,rent_id
 The third table Car_rent(CARRENT) has 4 colums, the names of the colums are Rent_ID, CARCUST_ID, RENT_DATE, RETURN_DATE.
+MYRENTCAR has 30 rows on each table as an input value and  a sequence which generate unique sequential values with the use of NEXTVAL function with each id retrieves the next value in a sequence.
+MYRENTCAR has 2 procedures, 2functions, 3cursors, 2triggers a view and lastly a package.
+
+                                   TECHINCAL DATA FOR SETUP
+                                   
+
+                                         
+     
+
+
+
+
+
+
 
 

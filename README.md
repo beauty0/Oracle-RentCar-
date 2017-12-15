@@ -14,6 +14,10 @@ MYRENTCAR has 2 procedures, 2functions, 3cursors, 2triggers a view and lastly a 
 
                                    TECHINCAL DATA FOR SETUP
                                    
+                                   
+ Setting up MYRENTCAR APP with running the first file Createuser.sql file inside this file is the code to create the tablespace called MYRENTCAR_db and its DATAFILE, next to is run the temporary tablespace 'MYRENTCAR_db_tmp' after that you can now ran the 
+ 'create user MYRENTCAR IDENTIFIED BY reca'.
+
 
                                          
      

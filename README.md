@@ -44,6 +44,30 @@ For the CARRENT Table, to get the next value id the CARRENT_seq and Carrent_trg 
  
 To insert values into Carrent table the user has to select all the insert values on Carrent row the rent_id starts should start from 200 to 230 with the use of 'CARRENT_SEQ.NEXTVAL'.
 
+To insert values into Carmodel table the user has to select all the insert values on Carmodel row the model_id starts should start from 83 to 113 with the use of 'CARMODEL_SEQ.NEXTVAL'.
+
+                                 AllCURSORS.sql 
+                                 
+The AllCURSORS..sql file has three diiferent cursors. The first cursors is created  loop to retrieve both the rent_id and return_date from the CARRENT table, to run this the user have to select from the 'set SERVEROUTPUT ON' to the end
+
+The 2nd cursor was an explicit cursor it was created  to fetch the customer's address from the carcust table and the loop is to fetch the record of the customer using the carcust_id with that will output the customer name and address, if the user run the code  the enter substitution variable tab will pop up and ask the user to enter value for carcust_id
+
+The 3rd cursor is an implicit Cursors  it was created for Carmodel, this code shows the previous value and the time of update the user can run to will see the output of the code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
                     

@@ -35,7 +35,27 @@ MYRENTCAR has 2 procedures, 2functions, 3cursors, 2triggers a view and lastly a 
  
                              The Allsequences.sql
                              
- When all tables are created the next file to use is the Allsequences.sql                        
+ When all tables are created the next file to use is the Allsequences.sql the sequence for this start with 101 is to create the next value for the id, starting with running 'sequence CARCUST_seq' follow by te trigger CARCUST_trg that is for the CARCUST table.
+For the CARRENT Table, to get the next value id the CARRENT_seq and Carrent_trg has to run. Lastly the sequence for the CARMODEL Table,for the id to run 'CARMODEL_seq and CARMODEL_trg has to run.
+
+                    INSERT_ALLVALUES.sql
+                   
+' After creating a table, it will be empty untill the insert_allvalues.sql is run and to run this select all the 'insert into CACUST with the CACUST_ID starting with 101 and ending at 131 with the use of 'CARCUST_seq.NEXTVAL' in total the carcust table has 30 rows.
+ 
+To insert values into Carrent table the user has to select all the insert values on Carrent row the rent_id starts should start from 200 to 230 with the use of 'CARRENT_SEQ.NEXTVAL'.
+
+ 
+ 
+                    
+
+'
+
+
+
+
+ 
+ 
+ 
  
  
  

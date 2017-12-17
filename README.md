@@ -52,16 +52,55 @@ The AllCURSORS..sql file has three diiferent cursors. The first cursors is creat
 
 The 2nd cursor was an explicit cursor it was created  to fetch the customer's address from the carcust table and the loop is to fetch the record of the customer using the carcust_id with that will output the customer name and address, if the user run the code  the enter substitution variable tab will pop up and ask the user to enter value for carcust_id
 
-The 3rd cursor is an implicit Cursors  it was created for Carmodel, this code shows the previous value and the time of update the user can run to will see the output of the code.
+The 3rd cursor is an implicit Cursors  it was created for Carmodel, this code shows the previous value and the time of update the user can run it to will see the output of the code.
+
+                                           Carcust_view.sql
+                                           
+ The view is to display CARCUST and Return date from the CARRENT table to display this the user can run the code on the Carcust_view.sql file
+ 
+                                             Alltrigger.sql
+                                             
+inside the Alltrigger.sql file is 2 main triggers, the first is to output, new values and old values, name of the user and time of when the change was made. To achieve this the user should run the trigger called 'CARMO' starting from where the SET SERVEROUTPUT ON to where where the word END is and a backslash.  This trigger works only for the carmodel table
 
 
+The last trigger is called 'WEEKDAYS' this trigger stop any user from updating the CARCUST Table during weekends for this to work
+ the user should run the code from where SET SERVEROUTPUT ON to where where the word END is and a backslash.
+ 
+ 
+
+                                                Allprocedures.sql
+                                                
+
+Inside the Allprocedures.sql is 2 procedures, the first procedure is called the new 'new_procy' this procedure is an easy way to insert values into the CARCUST TABLE for this is to work you user should select the statement from where  'create or replace procedure new_procy' to end new_procy and a blackslash and run the statement
+After running the statement, the user should double click on the procedure called new_procy and click run, it will bring up the 'RUN PLSQL TAB' will pop up, there you user  have to fill in the input where the BEGIN CLAUSE IS and has the NULL VALUE, those Null values has to be changed into normal values
+
+Sample of the values are 
+
+CARC_ID := NULL, instead of Null it should be 131
+LST_NAME := NULL, instead of Null it should be 'SHANE'
+FIS_NAME := NULL, instead of Null it should be 'MARY'
+RESS := NULL, instead of Null it should be '33 SWIFTWOOD WAY'
+PO_CODE := NULL, instead of Null it should be 'D1E457P'
+TE_NUMB := NULL, instead of Null it should be '082467896'
+EM_DRESS := NULL,instead of Null it should be 'SHMRY'
+
+ The last procedure is called GET_CAR_TYPE this procedure is to get the output of the Model type with the input of the model_id, for this to work the user have to select  from 'create or replace PROCEDURE GET_CAR_TYPE' to  'END GET_CAR_TYPE and the blackslash then run the statement
+After running the statement double click on the GET_CAR_TYPE procedure and run it bring out the 'RUN PLSQL TAB' this should  pop up the user should remove the Null value and replace it with the model_id number, pls note the model id number start from 83-113 and to view result go to "Output Variable-log" the user should find the value there.
+
+                                                Allfunctions.sql
+
+ Inside this file is two functions the first function is called CHECK_ID this is created to find out if the CARCUST ID valid,it will zero is valid when is 1 it is invalid. For this is work the user has to select the code from SET SERVEROUTPUT ON to END CHECK_ID and the blackslash then run the statement
+After running the statement double click on the CHECK_ID function and run it bring out the 'RUN PLSQL TAB' this should  pop up the user should remove the Null value and replace it with the CARCUST_ID number, pls note the CARCUST id number start from 101-131 and to view result go to "Output Variable-log" the user should find the Output value there.
 
 
+The last function is called GET_MODEL_NAME this function is to get the String Value of a Car Model type with the input of the model id.
+For this is work the user has to select the code from 'create or replace FUNCTION GET_MODEL_NAME' to 'END GET_MODEL_NAME and the blackslash' then run the statement. After running the statement double click on the GET_MODEL_NAME function and run it bring out the 'RUN PLSQL TAB' this should  pop up the user should remove the Null value and replace it with the model_ID number, pls note the model id number start from 83-113 and to view result go to "Output Variable-log" the user should find the Output value there.
 
 
+ 
+Note incase of errors
 
-
-
+please note blackslash it shows 
 
 
 

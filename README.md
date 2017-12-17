@@ -76,13 +76,13 @@ After running the statement, the user should double click on the procedure calle
 
 Sample of the values are 
 
-CARC_ID := NULL, instead of Null it should be 131
-LST_NAME := NULL, instead of Null it should be 'SHANE'
-FIS_NAME := NULL, instead of Null it should be 'MARY'
-RESS := NULL, instead of Null it should be '33 SWIFTWOOD WAY'
-PO_CODE := NULL, instead of Null it should be 'D1E457P'
-TE_NUMB := NULL, instead of Null it should be '082467896'
-EM_DRESS := NULL,instead of Null it should be 'SHMRY'
+CARC_ID := NULL, instead of Null it should be 131;
+LST_NAME := NULL, instead of Null it should be 'SHANE';
+FIS_NAME := NULL, instead of Null it should be 'MARY';
+RESS := NULL, instead of Null it should be '33 SWIFTWOOD WAY';
+PO_CODE := NULL, instead of Null it should be 'D1E457P';
+TE_NUMB := NULL, instead of Null it should be '082467896';
+EM_DRESS := NULL,instead of Null it should be 'SHMRY';
 
  The last procedure is called GET_CAR_TYPE this procedure is to get the output of the Model type with the input of the model_id, for this to work the user have to select  from 'create or replace PROCEDURE GET_CAR_TYPE' to  'END GET_CAR_TYPE and the blackslash then run the statement
 After running the statement double click on the GET_CAR_TYPE procedure and run it bring out the 'RUN PLSQL TAB' this should  pop up the user should remove the Null value and replace it with the model_id number, pls note the model id number start from 83-113 and to view result go to "Output Variable-log" the user should find the value there.
@@ -97,7 +97,12 @@ The last function is called GET_MODEL_NAME this function is to get the String Va
 For this is work the user has to select the code from 'create or replace FUNCTION GET_MODEL_NAME' to 'END GET_MODEL_NAME and the blackslash' then run the statement. After running the statement double click on the GET_MODEL_NAME function and run it bring out the 'RUN PLSQL TAB' this should  pop up the user should remove the Null value and replace it with the model_ID number, pls note the model id number start from 83-113 and to view result go to "Output Variable-log" the user should find the Output value there.
 
 
- 
+
+                                                      Packagespecif.sql
+
+With the package the user has to run the package specification and the body they both sperate code.
+The name of the package is called 'FIRSTPACK', for the package to work the user has to run the first code this starts from 'CREATE OR REPLACE PACKAGE FIRSTPACK' to 'END FIRSTPACK and the blackslash' this is the package specification next is to  run package body that starts from 'create or replace PACKAGE BODY FIRSTPACK' to 'show errors'  After running the statement double click on the FIRSTPACK Package and run it, the tap bring out the 'RUN PLSQL TAB' this should pop up the user can select what target they want to work on.
+
 Note incase of errors
 
 please note blackslash it shows 

@@ -1,4 +1,4 @@
-Name: BEAUTY THABISILE  ORJIAKOR
+Name:  Isibéal Orjiakor
 EMAIL ADDRESS : isigirluk@yahoo.co.uk
 TelNumber : 0852728413
 

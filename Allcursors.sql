@@ -18,7 +18,8 @@ set SERVEROUTPUT ON;
  END; 
  /
  
-  ------create explicit cursor to fetch the customer's address from the carcust table and used loop to fetch the record of the customer using the carcust_id with that will output the customer name and address.
+  ------create explicit cursor to fetch the customer's address from the carcust table and
+  used loop to fetch the record of the customer using the carcust_id with that will output the customer name and address.
 ----
  set SERVEROUTPUT ON;
 
@@ -45,7 +46,7 @@ set SERVEROUTPUT ON;
   Close cur_carcu;
   end;
      /
-     ----------- creating an implicit Cursors to Carmodel and the it shows the previous value
+     ----------- creating an implicit Cursors to Carmodel and  it shows the previous value
      set SERVEROUTPUT ON;
 BEGIN
 	UPDATE CARMODEL SET CAR_COLOR='WHITE'

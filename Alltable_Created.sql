@@ -1,9 +1,9 @@
 ----Beauty orjiakor oracle project
 -----Creating a table for RENTCAR
 ----The first table to create is Car customer table 
-CREATE TABLE CARCUST
+CREATE TABLE Customer_Account
 (
- Carcust_id  NUMBER  (11) NOT NULL PRIMARY KEY,
+ Licence_id  NUMBER  (11) NOT NULL PRIMARY KEY,
  last_name VARCHAR2(50),
  first_name VARCHAR2(30),
  address VARCHAR2(40),
@@ -14,32 +14,60 @@ CREATE TABLE CARCUST
  
 
 -----Creating the last table call Car rent, this table will reference the car customer'table
-CREATE TABLE CARRENT
+
+
+CREATE TABLE Rent
 (
- Rent_id  NUMBER  (15) NOT NULL PRIMARY KEY,
- Carcust_id  NUMBER  (11),
+ Rent_id NUMBER(30) Not Null PRIMARY KEY,
+ Licence_id  NUMBER  (11),
  Rent_date DATE,
  Return_date DATE,
- CONSTRAINT fk_CARR_Carcust_id
-  FOREIGN KEY (Carcust_id)
-    REFERENCES CARCUST(Carcust_id)
+ CONSTRAINT fk_Cust_Licence_id
+  FOREIGN KEY (Licence_id)
+ REFERENCES Customer_Account(Licence_id)
+ 
+ CONSTRAINT fk_Veh_Vehicle_id
+  FOREIGN KEY (Vehicle_id)
+    REFERENCES Vehicle_type(Vehicle_id)
+ 
+ 
+ );
+ 
+  CREATE TABLE Vehicle_type
+(
+ Vehicle_id NUMBER(3) Not Null PRIMARY KEY,,
+Model_type  VARCHAR2(25),
+ Car_color VARCHAR2(20),
+ Car_type VARCHAR2(50),
+ Car_Year NUMBER(15)
+);
+
+Create Table Rentcar_state
+(
+Rentcarstate_id NUMBER(50) Not Null PRIMARY KEY,
+ Vehicle_id NUMBER(3),
+ Services DATE,
+  CONSTRAINT fk_Veh_Vehicle_id
+  FOREIGN KEY (Vehicle_id)
+    REFERENCES Vehicle_type(Vehicle_id)
+ 
+);
+
+
+CREATE TABLE Customer_PaymentPlans
+(
+ Payment_id NUMBER(60) Not Null PRIMARY KEY,
+ Licence_id  NUMBER  (11),
+ CreditCard_Num NUMBER(19),
+CreditCard_expiredate DATE,
+ CONSTRAINT fk_Cust_Licence_id
+  FOREIGN KEY (Licence_id)
+    REFERENCES Customer_Account(Licence_id)
     
 );
 
 
 ----Creating Carmodel table, this table will reference the car rent table 
- CREATE TABLE CARMODEL
-(
- Model_id NUMBER(10) Not Null PRIMARY KEY,
-Model_type  VARCHAR2(25),
- Car_color VARCHAR2(20),
- Car_type VARCHAR2(50),
- Car_Year NUMBER(15),
- Rent_id Number(15),
- CONSTRAINT fk_Carre_Rent_id
-  FOREIGN KEY (Rent_id)
-    REFERENCES CARRENT(Rent_id)
-);
 
 
  
